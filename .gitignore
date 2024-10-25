@@ -164,3 +164,4 @@ cython_debug/
 *temp/
 *test/
 artifacts/
+*.DS_Store*
