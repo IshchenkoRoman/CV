@@ -116,58 +116,77 @@ This `README.md` provides a comprehensive overview of the FastAPI endpoint, incl
 
 ```
 .
- |-artifacts
- | |-models
- | | |-NaiveCNN
- | | | |-NaiveCNN_dice_250e.pt
- | | |-UNet
- | | | |-UNet_dice_250e.pt
- | | |-SegNet_1
- | | | |-SegNet_dice_250e.pt
- | | |-SegNet
- | | | |-SegNet_dice_250e.pt
- |-dataset
- | |-PH2Dataset
- |-requirements.txt
- |-Dockerfile
- |-build_docker.sh
- |-README.md
- |-application.py
- |-.env
- |-test_client.py
- |-main.py
- |-tree.txt
- |-src
- | |-metrics
- | | |-losses
- | | | |-iloss.py
- | | | |-dice_loss.py
- | | | |-bce_loss.py
- | | | |-__init__.py
- | | | |-focal_loss.py
- | | |-quality
- | | | |-__init__.py
- | | | |-iou.py
- | | |-__init__.py
- | |-endpoints
- | | |-__init__.py
- | | |-nn_inference.py
- | |-provider
- | | |-gdrive_weights.py
- | |-__init__.py
- | |-utils
- | | |-read_files.py
- | | |-get_model.py
- | |-nn_models
- | | |-segnet.py
- | | |-nn_dependency_injection.py
- | | |-unet.py
- | | |-__init__.py
- | | |-naive_cnn.py
- | |-trainer.py
- | |-data
- | | |-provider
- | | | |-ph2_provider.py
- | | | |-iph2_provider.py
- | | |-__init__.py
+├── .env
+├── .gitignore
+├── Dockerfile
+├── IMD036.bmp
+├── README.md
+├── application.py
+├── artifacts
+│   └── models
+│       ├── NaiveCNN
+│       │   └── NaiveCNN_dice_250e.pt
+│       ├── SegNet
+│       │   └── SegNet_dice_250e.pt
+│       ├── SegNet_1
+│       │   └── SegNet_dice_250e.pt
+│       └── UNet
+│           └── UNet_dice_250e.pt
+├── build_docker.sh
+├── clients
+│   ├── client_curl.bash
+│   └── client_python.py
+├── docs
+│   ├── Makefile
+│   ├── make.bat
+│   └── source
+│       ├── _static
+│       ├── _templates
+│       ├── application.rst
+│       ├── conf.py
+│       ├── index.rst
+│       ├── nn_models.rst
+│       ├── provider.rst
+│       ├── train_losses.rst
+│       ├── trainer.rst
+│       └── utils.rst
+├── requirements.txt
+├── src
+│   ├── __init__.py
+│   ├── data
+│   │   ├── __init__.py
+│   │   └── provider
+│   │       ├── gdrive_weights.py
+│   │       ├── iph2_provider.py
+│   │       ├── ph2_provider.py
+│   │       └── provider_dependency_injection.py
+│   ├── endpoints
+│   │   ├── __init__.py
+│   │   └── nn_inference.py
+│   ├── metrics
+│   │   ├── __init__.py
+│   │   ├── losses
+│   │   │   ├── __init__.py
+│   │   │   ├── bce_loss.py
+│   │   │   ├── dice_loss.py
+│   │   │   ├── focal_loss.py
+│   │   │   └── iloss.py
+│   │   ├── metrics_dependency_injection.py
+│   │   └── quality
+│   │       ├── __init__.py
+│   │       └── iou.py
+│   ├── nn_models
+│   │   ├── __init__.py
+│   │   ├── naive_cnn.py
+│   │   ├── nn_dependency_injection.py
+│   │   ├── segnet.py
+│   │   └── unet.py
+│   ├── trainer
+│   │   ├── __init__.py
+│   │   ├── trainer.py
+│   │   └── trainer_dependency_injection.py
+│   └── utils
+│       ├── get_model.py
+│       └── read_files.py
+└── train.py
 ```
